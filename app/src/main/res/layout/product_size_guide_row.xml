@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/padding10"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/padding10"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:elevation="@dimen/margin10"
+        android:layout_marginTop="@dimen/padding5"
+        android:layout_marginBottom="@dimen/padding5"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_selectsize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold"
+                android:lines="1"
+                android:padding="@dimen/padding3"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="@string/size_guide"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:id="@+id/iv_close_size"
+            android:gravity="center|end">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="end|center"
+                android:gravity="center|end"
+                android:layout_height="@dimen/padding30">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/closse"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/offwhite"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recv_size"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/padding5"
+        android:layout_height="wrap_content"/>
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/grey"/>-->
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lv_sizeguide_click"
+        android:layout_marginTop="@dimen/padding5"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginRight="@dimen/padding10"
+        android:weightSum="4">
+        <TextView
+            android:id="@+id/tv_viewsize_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="center|start"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold"
+            android:lines="1"
+            android:padding="@dimen/padding3"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="@string/viewsize_guide"/>
+
+        <LinearLayout
+            android:id="@+id/lv_right_viewguide_click"
+            android:layout_weight="3.4"
+            android:gravity="center|end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_size_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_arrow_right_black_36dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+-->
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/padding10"
+    android:layout_marginLeft="@dimen/padding5"
+    android:paddingRight="@dimen/padding5"
+    android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:layoutDirection="rtl"
+            android:id="@+id/rad_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Latest" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="@dimen/padding5"
+            android:background="@color/lightgreyy" />
+
+
+
+</LinearLayout>

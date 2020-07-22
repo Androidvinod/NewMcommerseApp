@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding10"
+    android:id="@+id/lv_product_clickk"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/lv_pb_prod">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progressbar_ui" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lv_cnc_product_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <com.example.defaultdemotoken.RoundRectCornerImageView
+                    android:id="@+id/iv_product_img_cnc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_16"
+            android:id="@+id/tv_cnc_product_name"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="Dresses"
+            android:layout_marginTop="@dimen/padding5"
+            android:layout_gravity="center|start"
+            android:gravity="center"
+            android:padding="@dimen/padding3"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

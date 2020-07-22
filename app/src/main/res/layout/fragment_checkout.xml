@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.CheckoutFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="0dp"
+        android:gravity="center"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="0dp"
+            android:gravity="center"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_checkout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/checkout"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.2"
+                    android:gravity="center|end">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/lv_progress_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding10"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progressbar_ui" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|top"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|top"
+            android:layout_weight="3.6"
+            android:background="@color/white"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding10"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding8"
+                android:paddingTop="@dimen/padding3"
+                android:paddingBottom="@dimen/padding3">
+
+                <RadioButton
+                    android:id="@+id/rad_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.33"
+                    android:button="@drawable/radiobutton_drawable"
+                    android:enabled="false"
+                    android:focusable="false"
+                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.505"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                     <View
+                            android:id="@+id/view_del_grey"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:visibility="visible"
+                            android:background="@color/view_bg"
+                            android:layout_gravity="center"/>
+                    <View
+                        android:id="@+id/view_del_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:background="@color/green"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+              <!--  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.33"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/padding30"
+                        android:src="@drawable/checked_radio"/>
+
+                </LinearLayout>-->
+
+                <RadioButton
+                    android:visibility="visible"
+                    android:id="@+id/rad_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.33"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:button="@drawable/radiobutton_drawable"
+                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.505"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <View
+                        android:id="@+id/view_address_last_grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="visible"
+                        android:background="@color/view_bg"
+                        android:layout_gravity="center"/>
+                    <View
+                        android:id="@+id/view_address_last_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:background="@color/greeen"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rad_payments"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.32"
+                    android:layout_gravity="center|start"
+                    android:gravity="center|start"
+                    android:button="@drawable/radiobutton_drawable"
+                    android:enabled="false"
+                    android:focusable="false"
+                     />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:paddingRight="@dimen/padding10"
+                android:paddingLeft="@dimen/padding10">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center|start"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/tv_checkout_delevery"
+                            android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/delivery"
+                        android:gravity="center|start"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="2">
+                    <TextView
+                        android:id="@+id/tv_checkout_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/address"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center|end"
+                    android:layout_weight="2">
+                    <TextView
+                        android:id="@+id/tv_checkout_payments"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/payments"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:gravity="center|end"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+       <!-- <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|top"
+            android:layout_weight="3.6"
+            android:background="@color/white"
+            android:gravity="center|top"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <LinearLayout
+                android:id="@+id/lv_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/rad_delivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.6"
+                            android:backgroundTint="@color/greeen"
+                            android:buttonTint="@color/greeen"
+                            android:drawableTint="@color/greeen"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:foregroundTint="@color/greeen" />
+
+                        <View
+                            android:id="@+id/view_del_grey"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_weight="0.4"
+                            android:visibility="visible"
+                            android:background="@color/view_bg"
+                            android:layout_gravity="center"/>
+
+                        <View
+                            android:id="@+id/view_del_green"
+                            android:layout_width="match_parent"
+                            android:layout_weight="0.4"
+                            android:layout_height="1dp"
+                            android:visibility="gone"
+                            android:background="@color/green"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center|start"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_shipping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/delivery"
+                            android:gravity="center|start"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:weightSum="3">
+
+                        <View
+                            android:id="@+id/view_address_first_grey"
+                            android:layout_width="match_parent"
+                            android:layout_weight="0.9"
+                            android:layout_height="1dp"
+                            android:visibility="visible"
+                            android:background="@color/view_bg"
+                            android:layout_gravity="center"/>
+
+                        <View
+                            android:id="@+id/view_address_first_green"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:visibility="gone"
+                            android:layout_weight="0.9"
+                            android:background="@color/greeen"
+                            android:layout_gravity="center"/>
+
+                        <RadioButton
+                            android:id="@+id/rad_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:layout_gravity="center|left"
+                            android:gravity="center|start"
+                            android:buttonTint="@color/greeen"
+                            android:backgroundTint="@color/greeen"
+                            android:drawableTint="@color/greeen"
+                            android:foregroundTint="@color/greeen"
+                            android:enabled="false"
+                            android:focusable="false"/>
+
+                        <View
+                            android:id="@+id/view_address_last_grey"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_weight="0.9"
+                            android:visibility="visible"
+                            android:background="@color/view_bg"
+                            android:layout_gravity="center"/>
+
+                        <View
+                            android:id="@+id/view_address_last_green"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:visibility="gone"
+                            android:layout_weight="0.9"
+                            android:background="@color/greeen"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/address"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center|end"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+                        <View
+                            android:id="@+id/view_payments_grey"
+                            android:layout_width="match_parent"
+                            android:layout_weight="0.6"
+                            android:layout_height="1dp"
+                            android:visibility="visible"
+                            android:background="@color/view_bg"
+                            android:layout_gravity="center"/>
+
+                        <View
+                            android:id="@+id/view_payments_green"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:visibility="gone"
+                            android:layout_weight="0.6"
+                            android:background="@color/green"
+                            android:layout_gravity="center"/>
+
+                        <RadioButton
+                            android:id="@+id/rad_payments"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:layout_gravity="center|start"
+                            android:buttonTint="@color/greeen"
+                            android:backgroundTint="@color/greeen"
+                            android:drawableTint="@color/greeen"
+                            android:foregroundTint="@color/greeen"
+                            android:enabled="false"
+                            android:focusable="false"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center|end"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/payments"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            &lt;!&ndash;<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|top"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="top|center"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:layout_weight="2"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+                    &lt;!&ndash;<ImageView
+                        android:id="@+id/iv_shipping_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_done_black_18dp"
+                        android:visibility="invisible" />&ndash;&gt;
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/greeen"
+                        android:backgroundTint="@color/greeen"
+                        android:drawableTint="@color/greeen"
+                        android:foregroundTint="@color/greeen"
+                        android:enabled="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:layout_weight="2"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/greeen"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:layout_weight="2"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/greeen"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:id="@+id/lv_shipping"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:layout_weight="2"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_shipping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/delivery"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lv_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:layout_weight="2"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/address"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lv_confirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:layout_weight="2"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_confirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/payments"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>&ndash;&gt;
+
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frameLayout_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

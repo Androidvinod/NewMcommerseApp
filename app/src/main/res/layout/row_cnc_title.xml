@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_margin="@dimen/padding10"
+    android:id="@+id/lv_cnc_title_click"
+    android:background="@drawable/rounded_black_border"
+    android:padding="@dimen/padding5"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/cnc_title"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Men"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/padding5"
+        android:layout_marginLeft="@dimen/padding5"
+        android:textSize="@dimen/text_16"
+        android:includeFontPadding="false"
+        android:padding="@dimen/padding5"/>
+
+</LinearLayout>

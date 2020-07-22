@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="greylight">#e1e1e1</color>
+    <color name="offwhite">#86939c</color>
+    <color name="lightblue">#f0f5fd</color>
+    <color name="orange">#f9b615</color>
+    <color name="tabcolor">#e5efff</color>
+    <color name="darkblue">#a4c6ff</color>
+    <color name="border">#e5e5e5</color>
+    <color name="trans">#ff000000</color>
+    <color name="transperent">#CCFF0000</color>
+    <color name="background">#dddddd</color>
+    <color name="linecolor">#ebebeb</color>
+    <color name="rounded_blue">#d4eaff</color>
+    <color name="sqcolor">#fdfdfd</color>
+
+    <color name="off_grey">#b1b1b1</color>
+    <color name="login_edit_color">#898c91</color>
+    <color name="view_color">#ebebeb</color>
+    <color name="light_grey">#b7b7b7</color>
+    <color name="round_corner_color">#cccccc</color>
+    <color name="ed_text_signin">#919191</color>
+    <color name="greey">#cccccc</color>
+    <color name="grey">#6b6b6b</color>
+    <color name="grey_popup_line">#dfdfdf</color>
+    <color name="green">#09ED83</color>
+    <color name="lightgreen">#FF0fED83</color>
+    <color name="light_greyy">#dfdfdf</color>
+    <color name="duskYellow">#ffec3d</color>
+    <color name="offblack">#868686</color>
+    <color name="offgrey">#797979</color>
+    <color name="greyyy">#f7f7f7</color>
+    <color name="lightgreyy">#e4e4e4</color>
+    <color name="togelbutton">#777777</color>
+    <color name="greeen">#00c569</color>
+    <color name="cart_bg">#fafafa</color>
+    <color name="grey_black">#6e6e6e</color>
+    <color name="darkgrey">#bbbbbb</color>
+    <color name="greeey">#7d7d7d</color>
+    <color name="light_green">#ccffe7</color>
+    <color name="border_edittext">#d9d9d9</color>
+    <color name="view_bg">#eaeaea</color>
+    <color name="lightwhite">#f6f6f6</color>
+    <color name="lightgreenn">#e9fff5</color>
+
+</resources>

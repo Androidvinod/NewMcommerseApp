@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_delivery_method_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Standard Delivery"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin20"
+        android:textSize="@dimen/margin20"
+        android:textColor="@color/black"/>
+
+    <RadioButton
+        android:id="@+id/rad_delivery_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order will be delivered between 3-5 bussiness days"
+        android:layoutDirection="rtl"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/text_14"
+        android:textSize="@dimen/tetx_16"
+        android:buttonTint="@color/greeen"
+        android:backgroundTint="@color/greeen"
+        android:drawableTint="@color/greeen"
+        android:foregroundTint="@color/greeen" />
+
+</LinearLayout>

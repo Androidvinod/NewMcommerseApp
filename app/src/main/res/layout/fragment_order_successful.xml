@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.OrderSuccessfulFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_order_successful"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:gravity="center"
+            android:elevation="0dp"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:text="@string/ordersuccess"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center|end">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_without_login"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                app:cardUseCompatPadding="true"
+                android:layout_margin="@dimen/padding10"
+                android:visibility="visible"
+                app:cardElevation="@dimen/padding5"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/padding5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/padding20">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/round_check"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_successful"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/padding3"
+                        android:text="@string/yourorderhasbeensuuccessful"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_18" />
+
+                    <TextView
+                        android:id="@+id/tv_order_thankyou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/padding3"
+                        android:layout_marginTop="@dimen/padding10"
+                        android:text="@string/thamkyousomuchforyourorder"
+                        android:textColor="#c5c5c5"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/tv_continue_shopping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/padding3"
+                        android:layout_marginTop="@dimen/padding20"
+                        android:text="@string/continueshopping"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_16" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin20"
+                    android:layout_marginBottom="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_your_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tetx_16"
+                            android:textStyle="normal"
+                            android:text="Your Request has been sent"/>
+
+                        <TextView
+                            android:id="@+id/tv_successful"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="22dp"
+                            android:layout_marginTop="@dimen/padding5"
+                            android:textStyle="bold"
+                            android:text="SUCCESSFULLY"/>
+
+                        <com.example.defaultdemotoken.RoundRectCornerImageView
+                            android:id="@+id/iv_product_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginTop="@dimen/margin20"
+                            android:src="@drawable/family" />
+
+                        <TextView
+                            android:id="@+id/tv_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="40dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tetx_16"
+                            android:text="Please check your email for request details and you will be noticed before it starts through our application notification center and youe email address."/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="@dimen/padding30"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lv_back_to_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_greeeen"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/padding15"
+                        android:layout_marginLeft="@dimen/padding15"
+                        android:padding="@dimen/padding10">
+
+                        <TextView
+                            android:id="@+id/tv_back_to_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:padding="@dimen/padding3"
+                            android:text="B A C K  T O  H O M E"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

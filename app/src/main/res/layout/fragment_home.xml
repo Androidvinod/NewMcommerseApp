@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Fragment.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:gravity="center"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_home"
+            android:background="@null"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" >
+        <TextView
+            android:id="@+id/tv_home_titlee"
+            android:text="Fervenzi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:textColor="@color/black" />
+
+    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/lv_home_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progressbar_ui" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="@dimen/padding10"
+            android:padding="@dimen/padding15">
+
+            <LinearLayout
+                android:id="@+id/lv_search_home"
+                android:gravity="center|start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/padding8"
+                android:layout_marginRight="@dimen/padding8"
+                android:padding="@dimen/padding5"
+                android:background="@drawable/rounded_grey">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/black"
+                    android:layout_marginLeft="@dimen/padding10"
+                    android:src="@drawable/searchh"/>
+
+                <TextView
+                    android:id="@+id/tv_search_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/offgrey"
+                    android:layout_marginLeft="@dimen/padding10"
+                    android:padding="@dimen/padding10"
+                    android:textSize="@dimen/text_18"
+                    android:text="@string/search_hint"/>
+                <SearchView
+                    android:visibility="gone"
+                    android:id="@+id/search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:iconifiedByDefault="false"
+                    android:queryBackground="@android:color/transparent"
+                    android:queryHint="@string/search_hint">
+
+                </SearchView>
+
+            </LinearLayout>
+
+            <com.example.defaultdemotoken.EnhancedWrapContentViewPager
+                android:id="@+id/viewPager"
+                android:layout_marginTop="@dimen/padding20"
+                android:layout_marginLeft="@dimen/padding8"
+                android:layout_marginRight="@dimen/padding8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicatorr"
+                android:layout_marginTop="@dimen/padding10"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                app:ci_animator="@animator/indicator_animator"
+                app:ci_animator_reverse="@animator/indicator_animator_reverse"
+                app:ci_drawable="@drawable/black_radius_square"
+                app:ci_height="4dp"
+                app:ci_margin="6dp"
+                app:ci_width="22dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/padding8"
+                android:layout_marginRight="@dimen/padding8"
+                android:weightSum="4">
+                <TextView
+                    android:id="@+id/tv_browse_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/browse"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/text_18"
+                    />
+                <LinearLayout
+                    android:id="@+id/lv_see_all_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:gravity="center|end"
+                    android:layout_weight="3">
+                    <TextView
+                        android:id="@+id/tv_seeall_browse"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/seeall"
+                        android:textStyle="bold"
+                        android:padding="@dimen/padding8"
+                        android:textSize="@dimen/text_14"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:layout_marginTop="@dimen/padding10"
+                android:id="@+id/recv_categories" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/padding8"
+                android:layout_marginRight="@dimen/padding8"
+                android:weightSum="4">
+                <TextView
+                    android:id="@+id/tv_best_selling"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/bestselling"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/text_18"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_layout_blue"
+                    android:layout_gravity="end"
+                    android:gravity="center|end"
+                    android:layout_weight="3">
+                    <TextView
+                        android:id="@+id/tv_best_selling_seeall"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/seeall"
+                        android:textStyle="bold"
+                        android:padding="@dimen/padding8"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_14"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding10"
+                android:id="@+id/recv_bestselling"
+                />
+
+            <com.example.defaultdemotoken.Rounded
+                android:id="@+id/iv_middle_block"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/padding8"
+                android:layout_marginRight="@dimen/padding8"
+                android:layout_marginTop="@dimen/padding15"
+                android:layout_marginBottom="@dimen/padding10"
+                android:src="@drawable/ss" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/padding15"
+                android:layout_marginLeft="@dimen/padding8"
+                android:layout_marginRight="@dimen/padding8"
+                android:weightSum="4">
+                <TextView
+                    android:id="@+id/tv_new_arrivals"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/arrival"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/text_18"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded"
+                    android:layout_gravity="end"
+                    android:gravity="center|end"
+                    android:layout_weight="3">
+                    <TextView
+                        android:id="@+id/tv_new_see_all"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="See all"
+                        android:textStyle="bold"
+                        android:padding="@dimen/padding8"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_14" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding10"
+                android:id="@+id/recv_newarrivals"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding8"
+                android:layout_marginLeft="@dimen/padding8"
+                android:layout_marginTop="@dimen/padding10"
+                android:layout_marginBottom="@dimen/padding10">
+
+                <com.example.defaultdemotoken.Rounded
+                    android:id="@+id/iv_bottom_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="@dimen/padding10"
+                    android:src="@drawable/botttmbanner" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_alignParentRight="true"
+
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_home_off"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="20 % off everything"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_20"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_sale"
+                        android:layout_marginTop="@dimen/padding5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/your_string_here"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_16"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

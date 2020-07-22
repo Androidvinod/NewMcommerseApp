@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="example.javatpoint.com.optionmenu.MainActivity">
+    <item
+        android:id="@+id/cartt"
+        android:icon="@drawable/car"
+        android:title=""
+        app:showAsAction="always" />
+
+   <!-- <item
+        android:id="@+id/cart"
+        android:icon="@drawable/car"
+        android:title=""
+        app:showAsAction="always" />-->
+
+</menu>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin20"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+
+                    android:id="@+id/checkbox_biling"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:button="@drawable/checkbox_selector"
+                    android:textColor="@color/black"
+                    android:text="Billing address is the same as delivery"
+                    android:drawablePadding="-50dp"
+                    android:paddingLeft="@dimen/margin20"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/lvnodata_addres"
+                        layout="@layout/datanotfound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
+                    <LinearLayout
+                        android:id="@+id/lv_progress_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="50dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:indeterminateDrawable="@drawable/progressbar_ui" />
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="@dimen/padding15"
+                        android:id="@+id/recyclerview_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scrollbars="none"
+                        android:visibility="visible"/>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lv_add_new_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding5"
+                        android:layout_marginRight="@dimen/padding5"
+                        android:layout_marginTop="@dimen/padding30"
+                        android:background="@drawable/rounded_greeeen"
+                        android:layout_gravity="end">
+
+                        <TextView
+                            android:id="@+id/tv_add_new_address"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/addnewAddress"
+                            android:textStyle="bold"
+                            android:padding="@dimen/padding8"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_14" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1.7">
+
+            <LinearLayout
+                android:id="@+id/lv_address_back"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:background="@drawable/back_bg"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/margin20">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/backk"
+                    android:textStyle="bold"
+                    android:padding="@dimen/padding8"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lv_address_next"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_greeeen"
+                android:layout_gravity="end">
+
+                <TextView
+                    android:id="@+id/tv_new_see_all"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/next"
+                    android:textStyle="bold"
+                    android:padding="@dimen/padding8"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

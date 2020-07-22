@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "103474695426",
+    "firebase_url": "https://mcommerceapp-e48e9.firebaseio.com",
+    "project_id": "mcommerceapp-e48e9",
+    "storage_bucket": "mcommerceapp-e48e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103474695426:android:b2ff67e2e7110db84c861b",
+        "android_client_info": {
+          "package_name": "com.example.defaultdemotoken"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103474695426-kcmf9a0u0o3ogoir0l89rno042fsfm4e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.defaultdemotoken",
+            "certificate_hash": "cf3a35cbae8fa5352f75c9424fc704037e31a501"
+          }
+        },
+        {
+          "client_id": "103474695426-6uick1u0jjn03sg1ognafeii1qc2qern.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIovwR2shytY6f5K2vdpCYXT29k0DOvj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103474695426-6uick1u0jjn03sg1ognafeii1qc2qern.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
